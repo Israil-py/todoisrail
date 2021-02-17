@@ -1,0 +1,13 @@
+{% if tasks %}
+	<h2>Список задач</h2>
+		{% for task in tasks %}
+		<div class="get_taskbox-item">
+			{{ task.task_text }}
+			<a class="get_taskbox-item__btn" href="/delete_task/{{ task.id }}">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</a>
+		</div>
+		{% endfor %}
+	{% else %}
+		<div class="task_empty">Задачи пока не добавлены</div>
+{% endif %}

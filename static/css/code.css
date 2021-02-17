@@ -1,0 +1,171 @@
+:root {
+    --blue-color: #1290b9;
+    --green-color: #15cc1d;
+    --red-color: #fa3838;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: calibri;
+	font-size: 18px;
+	background-color: #ccc;
+	counter-reset: list;
+}
+
+main {
+    position: relative;
+	max-width: 700px;
+	min-height: 95vh;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 25px;
+}
+
+h1, h2 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.task {
+	width: 100%;
+	height: 50px;
+	padding: 0 20px;
+	font: inherit;
+	outline-color: #1290b9;
+}
+
+.get_taskbox-item {
+    position: relative;
+    color: #333;
+    font-size: 20px;
+    padding: 13px 20px 14px 60px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0 1px #000;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.get_taskbox-item__btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    width: 50px;
+    height: 100%;
+    font-size: 22px;
+    color: #eee;
+    line-height: 50px;
+    text-align: center;
+    background: var(--green-color);
+}
+
+.button {
+	height: 50px;
+	font: inherit;
+	margin-top: 20px;
+	padding: 0 30px;
+	background-color: var(--blue-color);
+	color: #eee;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #077497;
+}
+
+.button:active {
+	transform: translateX(2px);
+}
+
+.task_empty {
+    color: #999;
+    font-size: 24px;
+    height: 200px;
+    margin-top: 30px;
+    background: #eee;
+    text-align: center;
+    line-height: 8em;
+    border: 2px solid #ccc;
+}
+
+.get_taskbox-item:before {
+    counter-increment: list;
+    content: counter(list);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #eee;
+    width: 50px;
+    height: 100%;
+    font-size: 26px;
+    text-align: center;
+    line-height: 47px;
+    background: var(--blue-color);
+}
+
+.login-box {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.auth__intext {
+    font: inherit;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    padding: 0 10px;
+    outline-color: var(--blue-color);
+}
+
+.registr-linkbox {
+    font-size: 22px;    
+    margin: 40px 0;
+}
+
+.registr-linkbox a {
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+.logout__btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    color: #eee;
+    font-size: 22px;
+    text-align: center;
+    line-height: 51px;
+    background: var(--red-color);
+}
+
+.user_icon {
+    color: var(--blue-color);
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    .button {
+        width: 100%;
+    }
+}
+

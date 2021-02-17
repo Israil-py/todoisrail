@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login-box">
+	<h1>Регистрация</h1>
+	<form method="post">
+		<input class="auth__intext login" name="login" type="text" placeholder="Login" required>
+		<input class="auth__intext passw" name="passw" type="password" placeholder="Password" required>
+		<input class="auth__intext passw" name="c_passw" type="password" placeholder="Confirm password" required>
+		<input class="button" type="submit" value="Sign Up">
+	</form>
+	<div class="registr-linkbox">
+		<span>Уже есть аккаунт? </span>
+		<a href="/login">Войти!</a>
+	</div>
+</div>
+{% endblock %}
